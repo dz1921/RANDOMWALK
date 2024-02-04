@@ -30,10 +30,10 @@ class Cell:
 
  
 # z initial starting point, n steps, k number of walkers, vals to decide the direction
-w = 2
+w = 10
 z = 10
 n = 100
-k = 2
+k = 10
 
 vals = []
 x = []
@@ -50,7 +50,7 @@ for i in range(1, k+1):
     locals()[myval] = i
     vals.append(locals()[myval])
     cell=f"c{i}"
-    locals()[cell] = Cell(0,0,-1)
+    locals()[cell] = Cell(1,0,-1)
     myx = f"x{i}"
     myy = f"y{i}"
     locals()[myx] = numpy.zeros(n)
